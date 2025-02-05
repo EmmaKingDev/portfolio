@@ -11,6 +11,14 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
+// Add some debug logging in development
+if (import.meta.env.DEV) {
+  console.log("Firebase Config:", {
+    ...firebaseConfig,
+    apiKey: "HIDDEN", // Don't log sensitive values
+  });
+}
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
