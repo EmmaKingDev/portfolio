@@ -1,0 +1,497 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "IBM Plex Mono", monospace;
+  /* We keep a system font fallback chain for better performance during loading */
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-primary);
+  padding: 2rem;
+  border-bottom: 0.125rem solid var(--border-color); /* 2px */
+  width: 100vw;
+  min-height: 8vh;
+}
+
+.header-content {
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.header-left {
+  max-width: 37.5rem; /* 600px */
+}
+
+.about-text {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+.about-text p {
+  margin-bottom: 2rem; /* Adds space between paragraphs */
+}
+
+.header nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header nav a {
+  color: var(--text-primary);
+  text-decoration: none;
+  margin-left: 2rem;
+  transition: color 0.3s;
+}
+
+.header nav a:hover {
+  color: var(--accent-color);
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  width: 100%;
+  max-width: 75rem; /* 1200px */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-primary);
+}
+
+.project-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 90%; /* Default width */
+  max-width: 70rem;
+  padding: 2rem 1rem;
+  margin: 0 auto; /* Add this back to center */
+}
+
+/* Update regular project card styles */
+.project-card {
+  width: 100%;
+  border: 0.125rem solid var(--border-color);
+  padding: 2rem; /* Less padding on mobile */
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  background-color: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.project-card img {
+  width: min(25rem, 100%); /* Use smaller of 25rem or 100% container width */
+  height: min(25rem, 100vw); /* Match width for perfect circle */
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.project-content {
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.project-content h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.footer {
+  background-color: var(--bg-primary);
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  width: 100vw;
+  min-height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-detail {
+  padding: 2rem;
+}
+
+.about-section {
+  max-width: 50rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.about-text {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.greeting {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-right: 0.5rem;
+  font-style: normal;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.farewell-text {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.header h1 {
+  color: var(--text-primary);
+  font-style: italic;
+}
+
+.header h1 .highlight {
+  color: var(--accent-color);
+}
+
+/* Theme toggle button styles */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background-color: var(--border-color);
+  padding: 0.25rem;
+  border-radius: 2rem;
+}
+
+.theme-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+  transform: scale(0.9);
+  color: var(--text-primary);
+  border-radius: 1.5rem;
+  outline: none;
+}
+
+.theme-icon:focus {
+  outline: none;
+}
+
+.theme-icon:focus-visible {
+  outline: none;
+}
+
+.theme-icon.active {
+  opacity: 1;
+  transform: scale(1);
+  color: var(--accent-color);
+  background-color: var(--bg-primary);
+}
+
+.theme-icon:hover {
+  opacity: 0.8;
+}
+
+/* Monochrome theme (default) */
+.monochrome {
+  --bg-primary: #000000;
+  --text-primary: #ffffff;
+  --text-secondary: #ffffff;
+  --accent-color: #fffc3c;
+  --border-color: #ffffff;
+  --bg-secondary: #000000; /* New variable for secondary backgrounds */
+}
+
+/* Colorful theme */
+.colorful {
+  --bg-primary: #bc9af3; /* Light lilac background */
+  --text-primary: #ffffff; /* Coral/peach text */
+  --text-secondary: #ffffff; /* Soft peach secondary text */
+  --accent-color: #fffc3c; /* Bright pink accents */
+  --border-color: #ffffff; /* Light coral borders */
+}
+
+/* Update existing color values to use CSS variables */
+.header {
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header h1 {
+  color: var(--text-primary);
+}
+
+.header h1 .highlight {
+  color: var(--accent-color);
+}
+
+.header nav a {
+  color: var(--text-primary);
+}
+
+.header nav a:hover {
+  color: var(--accent-color);
+}
+
+.about-text {
+  color: var(--text-secondary);
+}
+
+.greeting {
+  color: var(--accent-color);
+}
+
+.project-card {
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.footer {
+  background-color: var(--bg-primary);
+  border-top: 1px solid var(--border-color);
+}
+
+.farewell-text {
+  color: var(--text-secondary);
+}
+
+.copyright {
+  color: var(--text-secondary);
+}
+
+/* Update theme toggle styles for monochrome */
+.monochrome .theme-toggle {
+  background-color: transparent; /* Remove white background */
+  border: 0.125rem solid #ffffff; /* Add white border instead */
+}
+
+.monochrome .theme-icon {
+  color: #ffffff; /* Make icons white by default */
+}
+
+.monochrome .theme-icon.active {
+  background-color: #ffffff; /* White background for active icon */
+  color: #000000; /* Black icon when active */
+}
+
+/* Update project card hover effect */
+.monochrome .project-card:hover {
+  transform: none;
+  border-color: var(--border-color);
+  background-color: var(--bg-primary);
+}
+
+/* Also update the body background */
+body {
+  background-color: var(--bg-primary);
+}
+
+/* Add specific styles for the cupcake icon */
+.theme-icon:last-child:hover {
+  /* Target the second icon (cupcake) */
+  color: #fffc3c !important; /* Changed from #ff61d8 */
+  opacity: 1;
+}
+
+/* Update existing theme toggle styles to not override the hover */
+.monochrome .theme-icon {
+  color: #ffffff;
+}
+
+.monochrome .theme-icon.active {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.monochrome .theme-icon:first-child:hover {
+  /* Coffee icon hover stays monochrome */
+  color: #ffffff;
+}
+
+/* Theme icon hover behaviors */
+.theme-icon:hover {
+  opacity: 0.8;
+}
+
+/* Cupcake icon hover - always shows yellow */
+.theme-icon:last-child:hover {
+  color: #fffc3c !important; /* Changed from #ff61d8 */
+  opacity: 1;
+}
+
+/* Coffee icon hover in monochrome - shows black */
+.monochrome .theme-icon:first-child:hover {
+  color: #000000;
+  background-color: #ffffff;
+  opacity: 1;
+}
+
+/* Coffee icon hover in colorful theme */
+.colorful .theme-icon:first-child:hover {
+  color: var(--accent-color);
+  opacity: 1;
+}
+
+/* Update border widths for colorful theme */
+.colorful .project-card {
+  border: 0.125rem solid var(--border-color); /* 2px border */
+}
+
+.colorful .theme-toggle {
+  border: 0.125rem solid var(--border-color); /* 2px border */
+  background-color: transparent;
+}
+
+/* Update text colors for better contrast on light background */
+.colorful .header h1 {
+  color: var(--text-primary);
+}
+
+.colorful .project-card {
+  background-color: var(--bg-primary); /* Same as main background */
+}
+
+.colorful .project-card:hover {
+  border-color: var(--border-color);
+  background-color: var(--bg-primary); /* Keep same background on hover */
+}
+
+/* Add new hover effect for text */
+.project-content h3,
+.project-content p,
+.read-more-link {
+  transition: color 0.3s ease;
+}
+
+.project-card:hover .project-content h3,
+.project-card:hover .project-content p {
+  color: var(--text-primary); /* Keep original text color */
+}
+
+/* Keep read-more-link yellow */
+.project-card:hover .read-more-link {
+  color: var(--accent-color); /* Keep the accent color */
+}
+
+.logo-link {
+  display: none;
+}
+
+.read-more-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.read-more-link:hover {
+  opacity: 0.8;
+}
+
+/* Media query for desktop */
+@media (min-width: 768px) {
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header nav {
+    gap: 2rem;
+  }
+
+  .project-grid {
+    width: 70%;
+    margin: 0 auto; /* Ensure centering is maintained */
+  }
+
+  .project-card {
+    padding: 5rem;
+  }
+}
+
+/* Media query for very small screens */
+@media (max-width: 480px) {
+  .header-content {
+    align-items: center; /* Center all header content */
+    text-align: center; /* Center text */
+  }
+
+  .header nav {
+    flex-direction: column;
+    align-items: center; /* Center nav items */
+    gap: 1.5rem; /* Increase gap between items */
+    width: 100%; /* Take full width */
+    margin-top: 1rem; /* Add space after header */
+  }
+
+  .header nav a {
+    margin-left: 0;
+  }
+
+  .theme-toggle {
+    margin-top: 0.5rem; /* Add space before theme toggle */
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+
+  .project-card img {
+    width: min(100%, 20rem); /* Slightly smaller on mobile */
+    height: min(100%, 20rem);
+  }
+}
+
+/* Update medium screens */
+@media (min-width: 481px) and (max-width: 767px) {
+  .project-card img {
+    width: min(100%, 22rem); /* Medium size */
+    height: min(100%, 22rem);
+  }
+}
