@@ -101,7 +101,14 @@ function ProjectGrid() {
     <div className="project-grid">
       {projects.map((project) => (
         <div key={project.id} className="project-card">
-          <img src={project.image} alt={project.title} />
+          <img
+            src={project.image}
+            alt={project.title}
+            onError={(e) => {
+              console.error(`Failed to load image: ${project.image}`);
+              e.currentTarget.style.display = "none";
+            }}
+          />
           <div className="project-content">
             <h3>{project.title}</h3>
             <p>{project.shortDesc}</p>
