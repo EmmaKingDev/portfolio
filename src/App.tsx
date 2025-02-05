@@ -1,5 +1,5 @@
 import "./App.css";
-import { BiSolidCoffee } from "react-icons/bi";
+import { BiSolidCoffee, BiCodeAlt } from "react-icons/bi";
 import { GiCupcake } from "react-icons/gi";
 import { TbTrees } from "react-icons/tb";
 import { useState, createContext, useContext, useEffect } from "react";
@@ -38,6 +38,7 @@ function Header() {
     <header className="header">
       <div className="header-content">
         <h1>
+          <BiCodeAlt size={24} className="header-icon" />
           <span>emmaking</span>
           <span className="highlight">dev</span>
         </h1>
