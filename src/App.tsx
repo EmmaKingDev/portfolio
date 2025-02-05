@@ -83,7 +83,7 @@ function ProjectGrid() {
     {
       id: 1,
       title: "Project 1",
-      image: "/src/assets/images/projects/1.png",
+      image: "/images/projects/1.png",
       shortDesc:
         "The goal of this project was to experiment with deploying to Firebase (and playing around with Astro) while automating website updates using a GitHub Actions workflow. Just add, commit, push—and just like that the site updates automatically!",
       github: "https://github.com/emmakingdev/mywebsite",
@@ -91,7 +91,7 @@ function ProjectGrid() {
     {
       id: 2,
       title: "Project",
-      image: "/src/assets/images/projects/2.png",
+      image: "/images/projects/2.png",
       shortDesc: "I will be a description some day",
       github: "https://github.com/emmakingdev",
     },
