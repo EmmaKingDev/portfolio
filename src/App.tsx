@@ -2,7 +2,9 @@ import "./App.css";
 import { BiSolidCoffee } from "react-icons/bi";
 import { GiCupcake } from "react-icons/gi";
 import { TbTrees } from "react-icons/tb";
-import { useState, createContext, useContext } from "react";
+import { useState, createContext, useContext, useEffect } from "react";
+import { analytics } from "./firebase";
+import { logEvent } from "firebase/analytics";
 
 // Create theme context
 const ThemeContext = createContext({
@@ -147,6 +149,11 @@ function App() {
   const toggleTheme = () => {
     setIsColorful((prev) => !prev);
   };
+
+  useEffect(() => {
+    // Log page view when the app loads
+    logEvent(analytics, "page_view");
+  }, []);
 
   return (
     <ThemeContext.Provider value={{ isColorful, toggleTheme }}>
