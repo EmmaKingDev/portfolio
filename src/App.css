@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "IBM Plex Mono", monospace;
-  /* We keep a system font fallback chain for better performance during loading */
 }
 
 .app-container {
@@ -20,7 +19,7 @@
   top: 0;
   background-color: var(--bg-primary);
   padding: 2rem;
-  border-bottom: 0.125rem solid var(--border-color); /* 2px */
+  border-bottom: 2px solid var(--border-color);
   width: 100vw;
   min-height: 8vh;
 }
@@ -32,7 +31,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 1rem 0;
+  padding: 2rem;
 }
 
 .header-left {
@@ -72,7 +71,7 @@
   flex: 1;
   padding: 2rem;
   width: 100%;
-  max-width: 75rem; /* 1200px */
+  max-width: 75rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -82,19 +81,19 @@
 .project-grid {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  width: 90%; /* Default width */
+  gap: 6rem;
+  width: 90%;
   max-width: 70rem;
-  padding: 2rem 1rem;
-  margin: 0 auto; /* Add this back to center */
+  padding: 2rem 2rem;
+  margin: 0 auto;
 }
 
-/* Update regular project card styles */
 .project-card {
   width: 100%;
-  border: 0.125rem solid var(--border-color);
-  padding: 2rem; /* Less padding on mobile */
+  border: 2px solid var(--border-color);
+  padding: 2rem;
   text-decoration: none;
+  border-radius: 1rem;
   color: var(--text-primary);
   transition: all 0.3s ease;
   background-color: var(--bg-primary);
@@ -105,8 +104,8 @@
 }
 
 .project-card img {
-  width: min(25rem, 100%); /* Use smaller of 25rem or 100% container width */
-  height: min(25rem, 100vw); /* Match width for perfect circle */
+  width: min(25rem, 100%);
+  height: min(25rem, 100vw);
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
@@ -127,10 +126,11 @@
 
 .footer {
   background-color: var(--bg-primary);
-  padding: 2rem;
+  padding: 4rem;
   text-align: center;
-  border-top: 1px solid var(--border-color);
+  border-top: 2px solid var(--border-color);
   width: 100vw;
+  margin-top: 4rem;
   min-height: 8vh;
   display: flex;
   align-items: center;
@@ -197,6 +197,7 @@
   background-color: var(--border-color);
   padding: 0.25rem;
   border-radius: 2rem;
+  border: 2px solid var(--border-color);
 }
 
 .theme-icon {
@@ -241,22 +242,22 @@
   --text-secondary: #ffffff;
   --accent-color: #fffc3c;
   --border-color: #ffffff;
-  --bg-secondary: #000000; /* New variable for secondary backgrounds */
+  --bg-secondary: #000000;
 }
 
 /* Colorful theme */
 .colorful {
-  --bg-primary: #bc9af3; /* Light lilac background */
-  --text-primary: #ffffff; /* Coral/peach text */
-  --text-secondary: #ffffff; /* Soft peach secondary text */
-  --accent-color: #fffc3c; /* Bright pink accents */
-  --border-color: #ffffff; /* Light coral borders */
+  --bg-primary: #9e89f2;
+  --text-primary: #ffffff;
+  --text-secondary: #ffffff;
+  --accent-color: #fffc3c;
+  --border-color: #ffffff;
 }
 
 /* Update existing color values to use CSS variables */
 .header {
   background-color: var(--bg-primary);
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
 }
 
 .header h1 {
@@ -284,14 +285,14 @@
 }
 
 .project-card {
-  border: 1px solid var(--border-color);
+  border: 2px solid var(--border-color);
   background-color: var(--bg-primary);
   color: var(--text-primary);
 }
 
 .footer {
   background-color: var(--bg-primary);
-  border-top: 1px solid var(--border-color);
+  border-top: 2px solid var(--border-color);
 }
 
 .farewell-text {
@@ -304,39 +305,34 @@
 
 /* Update theme toggle styles for monochrome */
 .monochrome .theme-toggle {
-  background-color: transparent; /* Remove white background */
-  border: 0.125rem solid #ffffff; /* Add white border instead */
+  background-color: transparent;
+  border: 2px solid #ffffff;
 }
 
 .monochrome .theme-icon {
-  color: #ffffff; /* Make icons white by default */
+  color: #ffffff;
 }
 
 .monochrome .theme-icon.active {
-  background-color: #ffffff; /* White background for active icon */
-  color: #000000; /* Black icon when active */
+  background-color: #ffffff;
+  color: #000000;
 }
 
-/* Update project card hover effect */
 .monochrome .project-card:hover {
   transform: none;
   border-color: var(--border-color);
   background-color: var(--bg-primary);
 }
 
-/* Also update the body background */
 body {
   background-color: var(--bg-primary);
 }
 
-/* Add specific styles for the cupcake icon */
 .theme-icon:last-child:hover {
-  /* Target the second icon (cupcake) */
-  color: #fffc3c !important; /* Changed from #ff61d8 */
+  color: #fffc3c !important;
   opacity: 1;
 }
 
-/* Update existing theme toggle styles to not override the hover */
 .monochrome .theme-icon {
   color: #ffffff;
 }
@@ -347,59 +343,48 @@ body {
 }
 
 .monochrome .theme-icon:first-child:hover {
-  /* Coffee icon hover stays monochrome */
   color: #ffffff;
 }
 
-/* Theme icon hover behaviors */
 .theme-icon:hover {
   opacity: 0.8;
 }
 
-/* Cupcake icon hover - always shows yellow */
 .theme-icon:last-child:hover {
-  color: #fffc3c !important; /* Changed from #ff61d8 */
+  color: #fffc3c !important;
   opacity: 1;
 }
 
-/* Coffee icon hover in monochrome - shows black */
 .monochrome .theme-icon:first-child:hover {
   color: #000000;
   background-color: #ffffff;
   opacity: 1;
 }
 
-/* Coffee icon hover in colorful theme */
 .colorful .theme-icon:first-child:hover {
   color: var(--accent-color);
   opacity: 1;
 }
 
-/* Update border widths for colorful theme */
 .colorful .project-card {
-  border: 0.125rem solid var(--border-color); /* 2px border */
+  background-color: var(--bg-primary);
+  border: 2px solid var(--border-color);
 }
 
 .colorful .theme-toggle {
-  border: 0.125rem solid var(--border-color); /* 2px border */
+  border: 2px solid var(--border-color);
   background-color: transparent;
-}
-
-/* Update text colors for better contrast on light background */
-.colorful .header h1 {
-  color: var(--text-primary);
-}
-
-.colorful .project-card {
-  background-color: var(--bg-primary); /* Same as main background */
 }
 
 .colorful .project-card:hover {
   border-color: var(--border-color);
-  background-color: var(--bg-primary); /* Keep same background on hover */
+  background-color: var(--bg-primary);
 }
 
-/* Add new hover effect for text */
+.colorful .header h1 {
+  color: var(--text-primary);
+}
+
 .project-content h3,
 .project-content p,
 .read-more-link {
@@ -408,12 +393,11 @@ body {
 
 .project-card:hover .project-content h3,
 .project-card:hover .project-content p {
-  color: var(--text-primary); /* Keep original text color */
+  color: var(--text-primary);
 }
 
-/* Keep read-more-link yellow */
 .project-card:hover .read-more-link {
-  color: var(--accent-color); /* Keep the accent color */
+  color: var(--accent-color);
 }
 
 .logo-link {
@@ -433,7 +417,6 @@ body {
   opacity: 0.8;
 }
 
-/* Media query for desktop */
 @media (min-width: 768px) {
   .header-content {
     flex-direction: row;
@@ -447,7 +430,7 @@ body {
 
   .project-grid {
     width: 70%;
-    margin: 0 auto; /* Ensure centering is maintained */
+    margin: 0 auto;
   }
 
   .project-card {
@@ -455,19 +438,18 @@ body {
   }
 }
 
-/* Media query for very small screens */
 @media (max-width: 480px) {
   .header-content {
-    align-items: center; /* Center all header content */
-    text-align: center; /* Center text */
+    align-items: center;
+    text-align: center;
   }
 
   .header nav {
     flex-direction: column;
-    align-items: center; /* Center nav items */
-    gap: 1.5rem; /* Increase gap between items */
-    width: 100%; /* Take full width */
-    margin-top: 1rem; /* Add space after header */
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    margin-top: 1rem;
   }
 
   .header nav a {
@@ -475,7 +457,7 @@ body {
   }
 
   .theme-toggle {
-    margin-top: 0.5rem; /* Add space before theme toggle */
+    margin-top: 0.5rem;
   }
 
   .project-card {
@@ -483,15 +465,14 @@ body {
   }
 
   .project-card img {
-    width: min(100%, 20rem); /* Slightly smaller on mobile */
+    width: min(100%, 20rem);
     height: min(100%, 20rem);
   }
 }
 
-/* Update medium screens */
 @media (min-width: 481px) and (max-width: 767px) {
   .project-card img {
-    width: min(100%, 22rem); /* Medium size */
+    width: min(100%, 22rem);
     height: min(100%, 22rem);
   }
 }
