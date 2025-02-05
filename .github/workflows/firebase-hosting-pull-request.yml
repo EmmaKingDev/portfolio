@@ -24,6 +24,6 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_EMMAKINGDEV }}
-          projectId: emmakingdev
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_A68D1 }}
+          projectId: portfolio-a68d1
           channelId: ${{ github.event_name == 'push' && 'live' || '' }}
