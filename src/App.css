@@ -80,8 +80,8 @@
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 6rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
   width: 95%;
   max-width: 75rem;
   padding: 2rem;
@@ -437,16 +437,16 @@ body {
   }
 
   .project-image-link img {
-    width: min(100%, 20rem);
-    height: min(100%, 20rem);
+    width: min(100%, 30rem);
+    height: min(100%, 30rem);
     aspect-ratio: 1 / 1;
   }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
   .project-image-link img {
-    width: min(100%, 22rem);
-    height: min(100%, 22rem);
+    width: min(100%, 32rem);
+    height: min(100%, 32rem);
     aspect-ratio: 1 / 1;
   }
 }
@@ -470,8 +470,8 @@ body {
 }
 
 .project-image-link img {
-  width: min(25rem, 100%);
-  height: min(25rem, 100%);
+  width: min(35rem, 100%);
+  height: min(35rem, 100%);
   object-fit: cover;
   object-position: center;
   border-radius: 50%;
@@ -483,7 +483,7 @@ body {
   text-align: center;
   color: var(--text-primary);
   font-size: 1.5rem;
-  margin: 2rem 0;
+  margin: 2rem 0 0 0;
   font-style: italic;
   opacity: 0.9;
 }
