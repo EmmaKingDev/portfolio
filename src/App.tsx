@@ -82,18 +82,18 @@ function ProjectGrid() {
   const projects = [
     {
       id: 1,
-      title: "Project 1",
-      image: "/images/projects/1.png",
-      shortDesc:
-        "The goal of this project was to experiment with deploying to Firebase (and playing around with Astro) while automating website updates using a GitHub Actions workflow. Just add, commit, push—and just like that the site updates automatically!",
-      github: "https://github.com/emmakingdev/mywebsite",
+      title: "Colorku",
+      image: "/images/projects/2.png",
+      shortDesc: "Sudoku but with colors",
+      github: "https://github.com/EmmaKingDev/colorku",
+      liveUrl: "https://colorku.web.app/",
     },
     {
       id: 2,
-      title: "Project",
-      image: "/images/projects/2.png",
-      shortDesc: "I will be a description some day",
-      github: "https://github.com/emmakingdev",
+      title: "Poetry Generator",
+      image: "/images/projects/1.png",
+      shortDesc: "Simple poetry generator",
+      github: "https://github.com/EmmaKingDev/mywebsite",
     },
   ];
 
@@ -101,14 +101,21 @@ function ProjectGrid() {
     <div className="project-grid">
       {projects.map((project) => (
         <div key={project.id} className="project-card">
-          <img
-            src={project.image}
-            alt={project.title}
-            onError={(e) => {
-              console.error(`Failed to load image: ${project.image}`);
-              e.currentTarget.style.display = "none";
-            }}
-          />
+          <a
+            href={project.liveUrl || project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-image-link"
+          >
+            <img
+              src={project.image}
+              alt={project.title}
+              onError={(e) => {
+                console.error(`Failed to load image: ${project.image}`);
+                e.currentTarget.style.display = "none";
+              }}
+            />
+          </a>
           <div className="project-content">
             <h3>{project.title}</h3>
             <p>{project.shortDesc}</p>
@@ -118,8 +125,19 @@ function ProjectGrid() {
               rel="noopener noreferrer"
               className="read-more-link"
             >
-              Read More
+              View Source
             </a>
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="read-more-link"
+                style={{ marginLeft: "1rem" }}
+              >
+                Live Demo
+              </a>
+            )}
           </div>
         </div>
       ))}
@@ -151,7 +169,7 @@ function About() {
 }
 
 function App() {
-  const [isColorful, setIsColorful] = useState(false);
+  const [isColorful, setIsColorful] = useState(true);
 
   const toggleTheme = () => {
     setIsColorful((prev) => !prev);
@@ -170,6 +188,7 @@ function App() {
         <Header />
         <main className="main-content">
           <About />
+          <h2 className="section-title">few of my recent creations</h2>
           <ProjectGrid />
         </main>
         <Footer />
