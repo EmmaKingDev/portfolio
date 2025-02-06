@@ -1,4 +1,4 @@
-# emmakingdev Portfolio
+# Portfolio
 
 A simple portfolio website built with React and Vite.
 
