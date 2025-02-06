@@ -94,6 +94,7 @@ function ProjectGrid() {
       image: "/images/projects/1.png",
       shortDesc: "Simple poetry generator",
       github: "https://github.com/EmmaKingDev/mywebsite",
+      liveUrl: "https://mywebsite-githubrepo.web.app/",
     },
   ];
 
@@ -125,19 +126,8 @@ function ProjectGrid() {
               rel="noopener noreferrer"
               className="read-more-link"
             >
-              View Source
+              Read More
             </a>
-            {project.liveUrl && (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="read-more-link"
-                style={{ marginLeft: "1rem" }}
-              >
-                Live Demo
-              </a>
-            )}
           </div>
         </div>
       ))}
