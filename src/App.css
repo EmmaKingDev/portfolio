@@ -161,10 +161,11 @@
 .farewell-text {
   color: var(--text-secondary);
   font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 .copyright {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   color: var(--text-secondary);
 }
 
@@ -244,7 +245,6 @@
   --border-color: #ffffff;
 }
 
-/* Update existing color values to use CSS variables */
 .header {
   background-color: var(--bg-primary);
   border-bottom: 2px solid var(--border-color);

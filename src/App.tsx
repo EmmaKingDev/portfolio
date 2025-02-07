@@ -72,6 +72,7 @@ function Footer() {
         <p className="farewell-text">
           <span className="greeting">Bye!</span> Thanks for visiting
         </p>
+        <p className="farewell-text">emma@emmaking.dev</p>
         <p className="copyright">© {currentYear} Emma King</p>
       </div>
     </footer>
