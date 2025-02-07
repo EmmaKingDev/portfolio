@@ -96,6 +96,14 @@ function ProjectGrid() {
       github: "https://github.com/EmmaKingDev/mywebsite",
       liveUrl: "https://mywebsite-githubrepo.web.app/",
     },
+    {
+      id: 3,
+      title: "Knitting Chart",
+      image: "/images/projects/3.png",
+      shortDesc: "Design knitting charts",
+      github: "https://github.com/EmmaKingDev/knitting-chart",
+      liveUrl: "https://knitting-charts.web.app/",
+    },
   ];
 
   return (

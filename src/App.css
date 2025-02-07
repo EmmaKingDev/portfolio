@@ -95,8 +95,8 @@
   border-radius: 15rem;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
-  padding: 4rem;
+  gap: 1rem;
+  padding: 2rem;
   background-color: var(--bg-primary);
   color: var(--text-primary);
 }
