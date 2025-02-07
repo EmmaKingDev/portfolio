@@ -140,7 +140,7 @@ function About() {
     <section className="about-section">
       <div className="about-text">
         <p>
-          <span className="greeting">Hi!</span> I'm a software engineer at an
+          <span className="greeting">Hi!</span> I'm a software engineer at a
           maintenance company. I mostly work with containers running on Linux
           servers, Kubernetes, CI/CD pipes, IaC, AWS Cloud, and a bunch of
           programming languages. I also do freelance work, building websites and
@@ -150,7 +150,7 @@ function About() {
           I studied a lot of things! Educational psychology, chemistry, and
           computer science at the Uni of Helsinki and graphic design at Helsinki
           Design School. That mix helps me bring both analytical thinking and a
-          human-centered approach client work. As they say in Finnish - I can
+          human-centered approach to client work. As they say in Finnish - I can
           see the forest for the trees. <TbTrees size={20} />
         </p>
       </div>
