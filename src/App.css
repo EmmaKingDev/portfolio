@@ -440,6 +440,7 @@ body {
     width: min(100%, 30rem);
     height: min(100%, 30rem);
     aspect-ratio: 1 / 1;
+    border: 4px solid white;
   }
 }
 
@@ -477,6 +478,7 @@ body {
   border-radius: 50%;
   transition: all 0.3s ease;
   aspect-ratio: 1 / 1;
+  border: 8px solid white;
 }
 
 .section-title {

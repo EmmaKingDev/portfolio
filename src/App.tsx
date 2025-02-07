@@ -83,7 +83,7 @@ function ProjectGrid() {
   const projects = [
     {
       id: 1,
-      title: "Colorku",
+      title: "COLORKU",
       image: "/images/projects/2.png",
       shortDesc: "Sudoku but with colors",
       github: "https://github.com/EmmaKingDev/colorku",
@@ -91,7 +91,7 @@ function ProjectGrid() {
     },
     {
       id: 2,
-      title: "Poetry Generator",
+      title: "POETRY",
       image: "/images/projects/1.png",
       shortDesc: "Simple poetry generator",
       github: "https://github.com/EmmaKingDev/mywebsite",
@@ -99,7 +99,7 @@ function ProjectGrid() {
     },
     {
       id: 3,
-      title: "Knitting Chart",
+      title: "KNITTING",
       image: "/images/projects/3.png",
       shortDesc: "Design knitting charts",
       github: "https://github.com/EmmaKingDev/knitting-chart",
