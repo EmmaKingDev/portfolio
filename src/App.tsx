@@ -91,11 +91,11 @@ function ProjectGrid() {
     },
     {
       id: 2,
-      title: "POETRY",
+      title: "ALPHABET",
       image: "/images/projects/1.png",
-      shortDesc: "Simple poetry generator",
-      github: "https://github.com/EmmaKingDev/mywebsite",
-      liveUrl: "https://mywebsite-githubrepo.web.app/",
+      shortDesc: "Alphabet game in Finnish",
+      github: "https://github.com/EmmaKingDev/UF-aakkoset",
+      liveUrl: "https://uf-aakkoset.web.app/",
     },
     {
       id: 3,
