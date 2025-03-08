@@ -38,8 +38,7 @@ function Header() {
     <header className="header">
       <div className="header-content">
         <h1>
-          <span>emmaking</span>
-          <span className="highlight">dev</span>
+          <span>emma king roivas</span>
         </h1>
         <nav>
           <a
@@ -73,7 +72,7 @@ function Footer() {
           <span className="greeting">Bye!</span> Thanks for visiting
         </p>
         <p className="farewell-text">emma@emmaking.dev</p>
-        <p className="copyright">© {currentYear} Emma King</p>
+        <p className="copyright">© {currentYear} Emma King Roivas</p>
       </div>
     </footer>
   );
@@ -149,16 +148,16 @@ function About() {
     <section className="about-section">
       <div className="about-text">
         <p>
-          <span className="greeting">Hi!</span> I'm a software engineer at a
-          maintenance company. I mostly work with containers running on Linux
-          servers, Kubernetes, CI/CD pipes, IaC, AWS Cloud, and a bunch of
-          programming languages. I also do freelance work, building websites and
-          handling tech & design for small businesses.
+          <span className="greeting">Hi!</span> I'm a consultant software
+          engineerworking with with containers, Linux servers, Kubernetes, CI/CD
+          pipes, IaC, AWS Cloud, and a bunch of programming languages. I also do
+          freelance work, building websites and handling tech & design for small
+          businesses.
         </p>
         <p>
           I studied a lot of things! Educational psychology, chemistry, and
           computer science at the Uni of Helsinki and graphic design at Helsinki
-          Design School. That mix helps me bring both analytical thinking and a
+          Design School. The mix helps me bring both analytical thinking and a
           human-centered approach to client work. As they say in Finnish - I can
           see the forest for the trees. <TbTrees size={20} />
         </p>

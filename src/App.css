@@ -172,6 +172,8 @@
 .header h1 {
   color: var(--text-primary);
   font-style: italic;
+  font-weight: 400;
+  font-size: 2.5rem;
 }
 
 .header h1 .highlight {
@@ -238,7 +240,7 @@
 
 /* Colorful theme */
 .colorful {
-  --bg-primary: #9e89f2;
+  --bg-primary: #b69dff;
   --text-primary: #ffffff;
   --text-secondary: #ffffff;
   --accent-color: #fffc3c;
@@ -484,9 +486,10 @@ body {
 .section-title {
   text-align: center;
   color: var(--text-primary);
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   margin: 2rem 0 0 0;
   font-style: italic;
+  font-weight: 400;
   opacity: 0.9;
 }
 
