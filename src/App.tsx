@@ -149,10 +149,10 @@ function About() {
       <div className="about-text">
         <p>
           <span className="greeting">Hi!</span> I'm a consultant software
-          engineerworking with with containers, Linux servers, Kubernetes, CI/CD
-          pipes, IaC, AWS Cloud, and a bunch of programming languages. I also do
-          freelance work, building websites and handling tech & design for small
-          businesses.
+          engineer working with with containers, Linux servers, Kubernetes,
+          CI/CD pipes, IaC, AWS Cloud, and a bunch of programming languages. I
+          also do freelance work, building websites and handling tech & design
+          for small businesses.
         </p>
         <p>
           I studied a lot of things! Educational psychology, chemistry, and
