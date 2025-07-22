@@ -38,7 +38,7 @@ function Header() {
     <header className="header">
       <div className="header-content">
         <h1>
-          <span>emma king roivas</span>
+          <span>emma king dev</span>
         </h1>
         <nav>
           <a
